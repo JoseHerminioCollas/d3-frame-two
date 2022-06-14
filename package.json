@@ -82,7 +82,66 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules": {
+      "object-curly-newline": [
+        0
+      ],
+      "arrow-body-style": [
+        0
+      ],
+      "arrow-parens": [
+        0
+      ],
+      "indent": [
+        "error",
+        2
+      ],
+      "global-require": 0,
+      "semi": [
+        "error",
+        "always"
+      ],
+      "react/prop-types": [
+        0
+      ],
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [
+            ".js",
+            ".jsx",
+            ".tsx"
+          ]
+        }
+      ],
+      "react/no-access-state-in-setstate": [
+        0
+      ],
+      "react/destructuring-assignment": [
+        0
+      ],
+      "prefer-rest-params": [
+        0
+      ],
+      "jsx-a11y/label-has-for": [
+        0
+      ],
+      "jsx-a11y/label-has-associated-control": [
+        0
+      ]
+    },
+    "globals": {
+      "describe": true,
+      "test": true,
+      "expect": true,
+      "document": true,
+      "beforeEach": true,
+      "it": true,
+      "jest": true,
+      "beforeAll": true,
+      "window": true
+    }
   },
   "browserslist": {
     "production": [
