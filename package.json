@@ -81,7 +81,8 @@
     "extends": [
       "react-app",
       "react-app/jest",
-      "airbnb"
+      "airbnb",
+      "airbnb-typescript"
     ],
     "rules": {
       "react/function-component-definition": 0,
@@ -142,6 +143,11 @@
       "jest": true,
       "beforeAll": true,
       "window": true
+    },
+    "parserOptions": {
+      "project": [
+        "tsconfig.json"
+      ]
     }
   },
   "browserslist": {
@@ -215,8 +221,11 @@
     ]
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "@typescript-eslint/parser": "^5.28.0",
     "eslint": "^8.17.0",
     "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.30.0",
