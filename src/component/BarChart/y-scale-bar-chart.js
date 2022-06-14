@@ -1,8 +1,8 @@
-import * as d3 from 'd3'
+import * as d3 from 'd3';
 
 const yScaleBarChart = (domain, range) => d3
   .scaleLinear()
   .rangeRound(range)
-  .domain(domain)
+  .domain(domain);
 
-export default yScaleBarChart
+export default yScaleBarChart;

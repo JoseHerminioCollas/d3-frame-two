@@ -1,13 +1,13 @@
-import React, { useContext } from 'react'
-import ChartFrame from '../ChartFrame'
-import Labels from './Labels'
-import Pies from './Pies'
-import { StoreContext } from '../../StoreContext'
-import { ThemeContext } from '../../theme/ThemeContext'
+import React, { useContext } from 'react';
+import ChartFrame from '../ChartFrame';
+import Labels from './Labels';
+import Pies from './Pies';
+import { StoreContext } from '../../StoreContext';
+import { ThemeContext } from '../../theme/ThemeContext';
 
 function PieChart() {
-  const { cssSheet } = useContext(ThemeContext)
-  const topOffest = 40
+  const { cssSheet } = useContext(ThemeContext);
+  const topOffest = 40;
 
   return (
     <StoreContext.Consumer>
@@ -37,10 +37,10 @@ function PieChart() {
               </text>
             </g>
           </ChartFrame>
-        )
+        );
       }}
     </StoreContext.Consumer>
 
-  )
+  );
 }
-export default PieChart
+export default PieChart;

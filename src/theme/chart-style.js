@@ -59,5 +59,5 @@ const chartStyle = {
     bottom: 0,
     left: 0,
   },
-}
-export default chartStyle
+};
+export default chartStyle;

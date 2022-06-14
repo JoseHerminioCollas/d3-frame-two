@@ -1,8 +1,8 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { StoreProvider } from '../StoreContext'
-import { ThemeProvider } from '../theme/ThemeContext'
-import LineChart from '../component/LineChart'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { StoreProvider } from '../StoreContext';
+import { ThemeProvider } from '../theme/ThemeContext';
+import LineChart from '../component/LineChart';
 
 jest.mock('jss', () => {
   return {
@@ -11,14 +11,14 @@ jest.mock('jss', () => {
       return {
         attach: () => { },
         classes: { mainContainer: {} },
-      }
+      };
     },
-  }
-})
+  };
+});
 
 describe('Line Chart', () => {
-  it(' should  mount', () => {
-    const div = document.createElement('div')
+  it('should  mount', () => {
+    const div = document.createElement('div');
     ReactDOM.render(
       <ThemeProvider>
         <StoreProvider>
@@ -26,7 +26,7 @@ describe('Line Chart', () => {
         </StoreProvider>
       </ThemeProvider>,
       div,
-    )
-    ReactDOM.unmountComponentAtNode(div)
-  })
-})
+    );
+    ReactDOM.unmountComponentAtNode(div);
+  });
+});

@@ -1,12 +1,12 @@
-import React from 'react'
-import numeral from 'numeral'
+import React from 'react';
+import numeral from 'numeral';
 
 const Bars = ({
   data, cssClasses, xScale, yScale,
 }) => {
   const Bar = data
     .map(d => { // set up the data for the elements
-      const yValue = yScale(d[1])
+      const yValue = yScale(d[1]);
       return {
         label: d[0],
         frequency: d[1],
@@ -14,7 +14,7 @@ const Bars = ({
         y: yValue,
         w: xScale.bandwidth(),
         h: yScale(0) - yValue,
-      }
+      };
     })
     .map(elementData => { // generate the elements for Bar
       return (
@@ -39,8 +39,8 @@ const Bars = ({
             }
           </text>
         </g>
-      )
-    })
-  return Bar
-}
-export default Bars
+      );
+    });
+  return Bar;
+};
+export default Bars;

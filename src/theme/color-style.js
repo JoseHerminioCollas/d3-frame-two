@@ -15,8 +15,8 @@ const colorStyle = {
     fill: 'red',
     stroke: 'orange',
   },
-}
-export default colorStyle
+};
+export default colorStyle;
 // const steps = 9
 // let i = 0
 // let j = 1

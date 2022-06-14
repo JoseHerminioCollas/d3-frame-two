@@ -1,12 +1,12 @@
-import React, { useContext } from 'react'
-import { StoreContext } from '../../StoreContext'
-import 'material-icons/iconfont/material-icons.css'
-import { ThemeContext, themeNames } from '../../theme/ThemeContext'
+import React, { useContext } from 'react';
+import { StoreContext } from '../../StoreContext';
+import 'material-icons/iconfont/material-icons.css';
+import { ThemeContext, themeNames } from '../../theme/ThemeContext';
 
-const iconList = ['bar_chart', 'show_chart', 'pie_chart', 'face']
-const symbolList = ['9711', '9723', '9651']
+const iconList = ['bar_chart', 'show_chart', 'pie_chart', 'face'];
+const symbolList = ['9711', '9723', '9651'];
 function Control() {
-  const { themeName, setThemeName, cssSheet } = useContext(ThemeContext)
+  const { themeName, setThemeName, cssSheet } = useContext(ThemeContext);
   return (
     <StoreContext.Consumer>
       {({ state, actions }) => {
@@ -37,7 +37,7 @@ function Control() {
                   >
                     &nbsp;
                   </button>
-                )
+                );
               })}
             </section>
             <section className={cssSheet.classes.controlChartType}>
@@ -77,9 +77,9 @@ function Control() {
               )
             }
           </section>
-        )
+        );
       }}
     </StoreContext.Consumer>
-  )
+  );
 }
-export default Control
+export default Control;

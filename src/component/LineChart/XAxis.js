@@ -1,5 +1,5 @@
-import React from 'react'
-import * as d3 from 'd3'
+import React from 'react';
+import * as d3 from 'd3';
 
 const XAxis = ({
   xScale,
@@ -9,7 +9,7 @@ const XAxis = ({
 }) => {
   const xAxis = d3.axisBottom()
     .scale(xScale)
-    .ticks(ticks)
+    .ticks(ticks);
 
   return (
     <g
@@ -17,7 +17,7 @@ const XAxis = ({
       className={cssClasses.classes.chartXAxis}
       transform={`translate(0 ${bottomOffset})`} // set the X position
     />
-  )
-}
+  );
+};
 
-export default XAxis
+export default XAxis;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 /**
 button.info-panel  {
   position: fixed;
@@ -72,5 +72,5 @@ const Info = ({ onClick }) => (
       Goatstone &copy; 2018
     </a>
   </button>
-)
-export default Info
+);
+export default Info;

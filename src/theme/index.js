@@ -1,17 +1,17 @@
-import ColorScheme from 'color-scheme'
+import ColorScheme from 'color-scheme';
 
-const scheme = new ColorScheme()
+const scheme = new ColorScheme();
 const schemes = [
   'mono',
   'contrast',
   'triade',
   'tetrade',
-  'analogic']
+  'analogic'];
 const variations = [
   'pastel',
   'soft',
   'light',
   'hard',
-  'pale']
+  'pale'];
 
-export { variations, scheme, schemes }
+export { variations, scheme, schemes };

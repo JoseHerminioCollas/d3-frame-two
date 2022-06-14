@@ -44,5 +44,5 @@ const datum = {
     ['Y', 0.01974],
     ['Z', 0.00074],
   ],
-}
-export default datum
+};
+export default datum;

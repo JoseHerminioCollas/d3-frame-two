@@ -1,5 +1,5 @@
-import { StateInterface } from './state'
-import { actionTypes, dispatchInterface } from './reducer'
+import { StateInterface } from './state';
+import { actionTypes, dispatchInterface } from './reducer';
 
 interface ShowInfoInterface {
   (): void
@@ -37,25 +37,25 @@ function useAction(state: StateInterface, dispatch: dispatchInterface)
   function showInfo(): void {
     dispatch({
       type: actionTypes.SHOW_INFO,
-    })
+    });
   }
   function hideInfo(): void {
-    dispatch({ type: actionTypes.HIDE_INFO })
+    dispatch({ type: actionTypes.HIDE_INFO });
   }
   function setChartType(chartType: string) {
-    dispatch({ type: actionTypes.SET_CHART_TYPE, chartType })
+    dispatch({ type: actionTypes.SET_CHART_TYPE, chartType });
   }
   function setChartSymbolType(symbol: string) {
-    dispatch({ type: actionTypes.SET_CHART_SYMBOL_TYPE, symbol })
+    dispatch({ type: actionTypes.SET_CHART_SYMBOL_TYPE, symbol });
   }
   function setTheme(theme: string) {
-    dispatch({ type: actionTypes.SET_THEME, theme })
+    dispatch({ type: actionTypes.SET_THEME, theme });
   }
   function setIconNodes(iconNodes: object[]) {
-    dispatch({ type: actionTypes.SET_ICON_NODES, iconNodes })
+    dispatch({ type: actionTypes.SET_ICON_NODES, iconNodes });
   }
   function setIsDrawn(isDrawn: boolean) {
-    dispatch({ type: actionTypes.SET_IS_DRAWN, isDrawn })
+    dispatch({ type: actionTypes.SET_IS_DRAWN, isDrawn });
   }
   return {
     showInfo,
@@ -65,7 +65,7 @@ function useAction(state: StateInterface, dispatch: dispatchInterface)
     setTheme,
     setIconNodes,
     setIsDrawn,
-  }
+  };
 }
 
-export default useAction
+export default useAction;

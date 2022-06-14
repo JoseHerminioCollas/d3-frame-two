@@ -1,9 +1,9 @@
-import React from 'react'
-import { StoreConsumer } from '../../StoreContext'
-import BarChart from '../BarChart'
-import LineChart from '../LineChart'
-import PieChart from '../PieChart'
-import ForceLayoutChart from '../ForceLayoutChart'
+import React from 'react';
+import { StoreConsumer } from '../../StoreContext';
+import BarChart from '../BarChart';
+import LineChart from '../LineChart';
+import PieChart from '../PieChart';
+import ForceLayoutChart from '../ForceLayoutChart';
 
 function Chart() {
   return (
@@ -31,11 +31,11 @@ function Chart() {
               <ForceLayoutChart />
             )}
           </React.Fragment>
-        )
+        );
       }}
     </StoreConsumer>
-  )
+  );
 }
-Chart.displayName = 'Chart'
+Chart.displayName = 'Chart';
 
-export default Chart
+export default Chart;

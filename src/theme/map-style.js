@@ -25,6 +25,6 @@ const mapStyle = {
     fill: 'transparent',
     strokeWidth: 13,
   },
-}
+};
 
-export default mapStyle
+export default mapStyle;

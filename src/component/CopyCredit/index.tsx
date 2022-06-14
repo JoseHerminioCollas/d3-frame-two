@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 function CopyCredit() {
   return (
@@ -14,7 +14,7 @@ function CopyCredit() {
         Goatstone &copy; 2019
       </a>
     </section>
-  )
+  );
 }
 
-export default CopyCredit
+export default CopyCredit;

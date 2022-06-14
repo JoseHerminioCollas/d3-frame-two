@@ -20,6 +20,6 @@ const controlStyle = {
     bottom: 0,
     right: '40px',
   },
-}
+};
 
-export default controlStyle
+export default controlStyle;

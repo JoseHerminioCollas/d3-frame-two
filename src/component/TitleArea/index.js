@@ -1,11 +1,11 @@
-import React, { useContext } from 'react'
-import 'material-icons/iconfont/material-icons.css'
-import { ThemeContext } from '../../theme/ThemeContext'
-import { StoreContext } from '../../StoreContext'
+import React, { useContext } from 'react';
+import 'material-icons/iconfont/material-icons.css';
+import { ThemeContext } from '../../theme/ThemeContext';
+import { StoreContext } from '../../StoreContext';
 
 function TitleArea() {
-  const { cssSheet } = useContext(ThemeContext)
-  const { state, actions } = useContext(StoreContext)
+  const { cssSheet } = useContext(ThemeContext);
+  const { state, actions } = useContext(StoreContext);
 
   return (
     <div
@@ -37,7 +37,7 @@ function TitleArea() {
         </a>
       </h1>
     </div>
-  )
+  );
 }
 
-export default TitleArea
+export default TitleArea;

@@ -241,4 +241,4 @@ export default [
   { name: 'youtube_searc' },
   { name: 'zoom_in' },
   { name: 'zoom_out' },
-]
+];

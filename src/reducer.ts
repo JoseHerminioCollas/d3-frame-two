@@ -1,5 +1,5 @@
 /* eslint indent: "off" */
-import { StateInterface } from './state'
+import { StateInterface } from './state';
 
 enum actionTypes {
   SHOW_INFO = 'SHOW_INFO',
@@ -10,7 +10,7 @@ enum actionTypes {
   SET_ICON_NODES = 'SET_ICON_NODES',
   SET_IS_DRAWN = 'SET_IS_DRAWN',
 }
-export { actionTypes }
+export { actionTypes };
 
 export interface ShowInfoInterface {
   type: typeof actionTypes.SHOW_INFO
@@ -53,30 +53,30 @@ export interface dispatchInterface {
 function reducer(state: StateInterface, action: AppActionsUnionInterface): StateInterface {
   switch (action.type) {
     case actionTypes.SHOW_INFO:
-      return Object.assign({}, state, { isInfoVisible: true })
+      return Object.assign({}, state, { isInfoVisible: true });
     case actionTypes.HIDE_INFO:
-      return Object.assign({}, state, { isInfoVisible: false })
+      return Object.assign({}, state, { isInfoVisible: false });
     case actionTypes.SET_CHART_TYPE:
-      return Object.assign({}, state, { chartType: action.chartType })
+      return Object.assign({}, state, { chartType: action.chartType });
     case actionTypes.SET_CHART_SYMBOL_TYPE:
-      return Object.assign({}, state, { chartSymbolType: action.symbol })
+      return Object.assign({}, state, { chartSymbolType: action.symbol });
     case actionTypes.SET_THEME:
-      return Object.assign({}, state, { theme: action.theme })
+      return Object.assign({}, state, { theme: action.theme });
     case actionTypes.SET_ICON_NODES:
       return Object.assign({}, state, {
         iconNodes: {
           nodes: action.iconNodes, isDrawn: false,
         },
-      })
+      });
     case actionTypes.SET_IS_DRAWN:
       return Object.assign({}, state, {
         iconNodes: {
           isDrawn: action.isDrawn,
           nodes: state.iconNodes,
         },
-      })
+      });
     default:
-      throw new Error('Error: Action type does not exist')
+      throw new Error('Error: Action type does not exist');
   }
 }
-export default reducer
+export default reducer;

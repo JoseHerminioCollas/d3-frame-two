@@ -1,6 +1,6 @@
-import * as d3 from 'd3'
-import chartStyle from './chart-style'
-import controlStyle from './control-style'
+import * as d3 from 'd3';
+import chartStyle from './chart-style';
+import controlStyle from './control-style';
 
 const defaultStyle = {
   mainContainer: {
@@ -16,8 +16,8 @@ const defaultStyle = {
     justifyContent: 'center',
     alignItems: 'center',
   },
-}
-Object.assign(defaultStyle, chartStyle, controlStyle)
+};
+Object.assign(defaultStyle, chartStyle, controlStyle);
 /* eslint-disable object-curly-newline */
 const menuOptions = [
   { label: 'Red', color: 'red', colors: ['red', 'white'], keyValue: 'red' },
@@ -32,7 +32,7 @@ const menuOptions = [
   { label: 'interpolateCool', color: 'blue', colors: ['lightblue', 'blue'], keyValue: 'f' },
   { label: 'interpolateWarm', color: 'blue', colors: ['orange', 'white'], keyValue: 'g' },
   { label: 'interpolateRainbow', color: 'gray', colors: ['red', 'green'], keyValue: 'h' },
-]
+];
 const styles = {
   red: { label: 'Red', interpolatorName: 'interpolateReds' },
   gray: { label: 'Gray', interpolatorName: 'interpolateGreys' },
@@ -46,7 +46,7 @@ const styles = {
   f: { label: 'C', interpolatorName: 'interpolateCool' },
   g: { label: 'C', interpolatorName: 'interpolateWarm' },
   h: { label: 'C', interpolatorName: 'interpolateRainbow' },
-}
+};
 const iVs = [
   {
     styleName: 'chartIconForce',
@@ -100,22 +100,22 @@ const iVs = [
       ['fill', 1],
     ],
   },
-]
-let prevThemeKey
-let newStyleObject = defaultStyle
+];
+let prevThemeKey;
+let newStyleObject = defaultStyle;
 function themeFactory(themeKey = 'default') {
   // bypass repeat calls with the same themeKey
-  if (prevThemeKey === themeKey) return newStyleObject
-  prevThemeKey = themeKey
-  if (themeKey === 'default') return defaultStyle
-  newStyleObject = JSON.parse(JSON.stringify(defaultStyle))
+  if (prevThemeKey === themeKey) return newStyleObject;
+  prevThemeKey = themeKey;
+  if (themeKey === 'default') return defaultStyle;
+  newStyleObject = JSON.parse(JSON.stringify(defaultStyle));
   for (let i = 0; i < iVs.length; i += 1) {
     for (let j = 0; j < iVs[i].styleProps.length; j += 1) {
       newStyleObject[iVs[i].styleName][iVs[i]
-        .styleProps[j][0]] = d3[styles[themeKey].interpolatorName](iVs[i].styleProps[j][1])
+        .styleProps[j][0]] = d3[styles[themeKey].interpolatorName](iVs[i].styleProps[j][1]);
     }
   }
-  return newStyleObject
+  return newStyleObject;
 }
-export { menuOptions }
-export default themeFactory
+export { menuOptions };
+export default themeFactory;
