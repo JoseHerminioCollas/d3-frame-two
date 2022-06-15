@@ -71,11 +71,9 @@ function Control() {
                       >
                         {String.fromCodePoint(symbolList[i])}
                       </button>
-                    ))
-                  }
+                    ))}
                 </section>
-              )
-            }
+              )}
           </section>
         );
       }}

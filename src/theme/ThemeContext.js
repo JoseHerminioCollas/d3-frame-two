@@ -18,7 +18,6 @@ const ThemeProvider = ({ children }) => {
     setCssSheet(newSheet);
   }, [themeName]);
 
-
   return (
     <ThemeContext.Provider value={{ themeName, setThemeName, cssSheet }}>
       {children}

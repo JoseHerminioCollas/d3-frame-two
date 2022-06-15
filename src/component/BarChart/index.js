@@ -26,35 +26,33 @@ const BarChart = () => {
     [state.chartSize.h - bottomOffset, topOffset],
   );
   return (
-    <React.Fragment>
-      <ChartFrame
+    <ChartFrame
+      cssClasses={cssSheet}
+    >
+      <XAxis
         cssClasses={cssSheet}
+        xScale={xScale}
+        bottomOffset={yScale(0)}
+      />
+      <YAxis
+        data={state.data.bar}
+        cssClasses={cssSheet}
+        yScale={yScale}
+        leftOffset={leftOffset}
+      />
+      <Bars
+        data={state.data.bar}
+        cssClasses={cssSheet}
+        xScale={xScale}
+        yScale={yScale}
+      />
+      <text
+        transform="translate(40 320)"
+        className={cssSheet.classes.chartText}
       >
-        <XAxis
-          cssClasses={cssSheet}
-          xScale={xScale}
-          bottomOffset={yScale(0)}
-        />
-        <YAxis
-          data={state.data.bar}
-          cssClasses={cssSheet}
-          yScale={yScale}
-          leftOffset={leftOffset}
-        />
-        <Bars
-          data={state.data.bar}
-          cssClasses={cssSheet}
-          xScale={xScale}
-          yScale={yScale}
-        />
-        <text
-          transform="translate(40 320)"
-          className={cssSheet.classes.chartText}
-        >
-          The Frequency of Letters in the English Language
-        </text>
-      </ChartFrame>
-    </React.Fragment>
+        The Frequency of Letters in the English Language
+      </text>
+    </ChartFrame>
   );
 };
 

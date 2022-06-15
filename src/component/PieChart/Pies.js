@@ -13,7 +13,7 @@ const Pies = ({
         innerRadius: 0,
         outerRadius: chartRadius,
       };
-      const newD = Object.assign({}, d, newValues);
+      const newD = { ...d, ...newValues };
       return newD;
     })
     .map((d) => {

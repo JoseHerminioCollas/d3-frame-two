@@ -10,27 +10,24 @@ function Chart() {
     <StoreConsumer>
       {({ state }) => {
         return (
-          <React.Fragment>
+          <>
             {state.chartType === state.chartTypes.BAR && (
               <BarChart />
-            )
-            }
+            )}
             {state.chartType === state.chartTypes.LINE && (
               <LineChart
                 events
               />
-            )
-            }
+            )}
             {state.chartType === state.chartTypes.PIE && (
               <PieChart
                 events
               />
-            )
-            }
+            )}
             {state.chartType === state.chartTypes.FORCE_LAYOUT && (
               <ForceLayoutChart />
             )}
-          </React.Fragment>
+          </>
         );
       }}
     </StoreConsumer>

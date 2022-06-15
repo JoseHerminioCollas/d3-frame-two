@@ -28,7 +28,7 @@ export interface StateInterface {
   chartSymbolType: string;
   themes: object;
   theme: string;
-  iconNodes: object[];
+  iconNodes: { name: string; }[] | { name?: string, nodes?: any, isDrawn?: boolean };
 }
 const defaultState = {
   isInfoVisible: false,

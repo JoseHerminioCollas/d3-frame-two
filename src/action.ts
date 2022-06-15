@@ -1,5 +1,5 @@
 import { StateInterface } from './state';
-import { actionTypes, dispatchInterface } from './reducer';
+import { actionTypes, DispatchInterface } from './reducer';
 
 interface ShowInfoInterface {
   (): void
@@ -32,7 +32,7 @@ export interface AppActionsInterface {
   setIsDrawn: SetIsDrawnInterface
 }
 
-function useAction(state: StateInterface, dispatch: dispatchInterface)
+function useAction(state: StateInterface, dispatch: DispatchInterface)
   : AppActionsInterface {
   function showInfo(): void {
     dispatch({

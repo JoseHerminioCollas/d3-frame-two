@@ -31,34 +31,31 @@ function ForceLayoutChart() {
     simulation.on('tick', () => tick());
   }, []);
   return (
-    <React.Fragment>
-      <ChartFrame
-        cssClasses={cssSheet}
+    <ChartFrame
+      cssClasses={cssSheet}
+    >
+      {localTrigger}
+      <g>
+        {iconNodes.map(n => {
+          return (
+            <text
+              x={(n.x)}
+              y={(n.y)}
+              key={`${Math.random()}${n.name}`}
+              className="material-icons"
+            >
+              {n.name}
+            </text>
+          );
+        })}
+      </g>
+      <text
+        transform="translate(40 320)"
+        className={cssSheet.classes.chartText}
       >
-        /** trigger the redraw */
-        {localTrigger}
-        <g>
-          {iconNodes.map(n => {
-            return (
-              <text
-                x={(n.x)}
-                y={(n.y)}
-                key={`${Math.random()}${n.name}`}
-                className="material-icons"
-              >
-                {n.name}
-              </text>
-            );
-          })}
-        </g>
-        <text
-          transform="translate(40 320)"
-          className={cssSheet.classes.chartText}
-        >
-          Material Font Icons
-        </text>
-      </ChartFrame>
-    </React.Fragment>
+        Material Font Icons
+      </text>
+    </ChartFrame>
   );
 }
 export default ForceLayoutChart;

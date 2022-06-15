@@ -1,12 +1,12 @@
 import React from 'react';
 import defaultState, { StateInterface } from './state';
-import reducer, { dispatchInterface } from './reducer';
+import reducer, { DispatchInterface } from './reducer';
 import useAction, { AppActionsInterface } from './action';
 
 const StoreContext = React.createContext<any>(defaultState);
 
 const StoreProvider: React.FC<any> = ({ children }) => {
-  const [state, dispatch]: [StateInterface, dispatchInterface] = React
+  const [state, dispatch]: [StateInterface, DispatchInterface] = React
     .useReducer(reducer, defaultState);
   const actions: AppActionsInterface = useAction(state, dispatch);
 
